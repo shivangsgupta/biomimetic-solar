@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BioMimetic Solar — Pachliopta aristolochiae Nanostructures</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #050a0e;
-    --bg2: #080f14;
-    --surface: #0d1a22;
-    --surface2: #122230;
-    --accent: #00e5b4;
-    --accent2: #ff7c3a;
-    --accent3: #7b5cf5;
-    --text: #e8f4f0;
-    --muted: #7a9ea8;
-    --border: rgba(0,229,180,0.12);
-    --glow: rgba(0,229,180,0.25);
+    --bg: #0f0608;
+    --bg2: #160a0d;
+    --surface: #2a1218;
+    --surface2: #3a1a22;
+    --accent: #d4a853;
+    --accent2: #c4736a;
+    --accent3: #8a9e7a;
+    --text: #f0e6d3;
+    --muted: #9e7e72;
+    --border: rgba(212,168,83,0.15);
+    --glow: rgba(212,168,83,0.3);
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
@@ -41,12 +41,12 @@
     position: fixed; top:0; left:0; right:0; z-index: 100;
     padding: 18px 48px;
     display: flex; align-items:center; justify-content:space-between;
-    background: rgba(5,10,14,0.85);
+    background: rgba(15,6,8,0.9);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 800; font-size: 14px; letter-spacing: 3px;
     color: var(--accent); text-transform: uppercase;
   }
@@ -78,7 +78,7 @@
     animation: fadeUp 0.8s ease both;
   }
   h1 {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: clamp(42px, 7vw, 90px);
     line-height: 1.05;
     font-weight: 400;
@@ -124,7 +124,7 @@
     text-transform:uppercase; margin-bottom:16px;
   }
   h2 {
-    font-family:'Instrument Serif', serif;
+    font-family:'Cormorant Garamond', serif;
     font-size: clamp(28px, 4vw, 52px);
     font-weight:400; line-height:1.15;
     margin-bottom: 20px;
@@ -196,7 +196,7 @@
   }
   .ccard.highlight {
     border-color: var(--accent);
-    background: linear-gradient(160deg, #0d2a22 0%, var(--surface) 100%);
+    background: linear-gradient(160deg, #2a1a08 0%, var(--surface) 100%);
   }
   .ccard.highlight::before {
     content:'★ KIT Research';
@@ -233,9 +233,9 @@
     transition: width 1.5s cubic-bezier(0.16,1,0.3,1);
     width:0;
   }
-  .fill-low { background: #ff4d4d; }
-  .fill-mid { background: var(--accent2); }
-  .fill-high { background: var(--accent); box-shadow:0 0 8px var(--accent); }
+  .fill-low { background: #c4736a; }
+  .fill-mid { background: #8a9e7a; }
+  .fill-high { background: #d4a853; box-shadow:0 0 8px rgba(212,168,83,0.6); }
   .cstat-val { font-size:11px; color:var(--text); min-width:36px; text-align:right; }
 
   /* ─── ABSORPTION CHART ─── */
@@ -430,7 +430,7 @@
     width: 0%; transition: width 0.6s cubic-bezier(0.16,1,0.3,1);
   }
   .dmeter-val {
-    font-family: 'Syne', sans-serif; font-size: 15px;
+    font-family: 'Playfair Display', serif; font-size: 15px;
     font-weight: 800; min-width: 44px; text-align: right;
   }
   .highlight-meter .dmeter-label { color: var(--accent); }
@@ -454,12 +454,12 @@
     display: inline-block;
     background: rgba(255,200,50,0.12);
     border: 1px solid rgba(255,200,50,0.3);
-    color: #ffd060; font-size: 10px; letter-spacing: 1.5px;
+    color: #d4a853; font-size: 10px; letter-spacing: 1.5px;
     padding: 2px 10px; border-radius: 20px;
     margin-right: 8px; vertical-align: middle;
   }
   .dmeter-sublabel {
-    font-size: 9px; color: #ffd060;
+    font-size: 9px; color: #d4a853;
     letter-spacing: 1px; margin-left: 4px;
     vertical-align: middle;
   }
@@ -600,7 +600,7 @@
 
       <!-- Flat Thin-Film -->
       <div class="ccard reveal">
-        <div class="ccard-icon" style="background:rgba(255,100,100,0.1);">🔲</div>
+        <div class="ccard-icon" style="background:rgba(196,115,106,0.12);">🔲</div>
         <div class="ccard-title">Flat Thin-Film</div>
         <div class="ccard-sub">H-a:Si Thin-Film — No Surface Treatment</div>
         <div class="ccard-stats">
@@ -640,7 +640,7 @@
 
       <!-- AR Coating -->
       <div class="ccard reveal" style="transition-delay:0.1s">
-        <div class="ccard-icon" style="background:rgba(255,124,58,0.1);">🔷</div>
+        <div class="ccard-icon" style="background:rgba(138,158,122,0.12);">🔷</div>
         <div class="ccard-title">AR-Coated Thin-Film</div>
         <div class="ccard-sub">H-a:Si + Anti-Reflection Coating (e.g. SiNₓ, MgF₂)</div>
         <div class="ccard-stats">
@@ -680,7 +680,7 @@
 
       <!-- Butterfly Nano -->
       <div class="ccard highlight reveal" style="transition-delay:0.2s">
-        <div class="ccard-icon" style="background:rgba(0,229,180,0.1);">🦋</div>
+        <div class="ccard-icon" style="background:rgba(212,168,83,0.12);">🦋</div>
         <div class="ccard-title">Bio-Nanostructured</div>
         <div class="ccard-sub">Pachliopta Nanohole Pattern · KIT Research</div>
         <div class="ccard-stats">
@@ -734,8 +734,8 @@
     <div class="chart-wrap reveal">
       <canvas id="absorptionChart"></canvas>
       <div class="chart-legend">
-        <div class="legend-item"><div class="legend-dot" style="background:#ff4d4d"></div>Flat Thin-Film (H-a:Si)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:var(--accent2)"></div>AR-Coated Thin-Film</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#c4736a"></div>Flat Thin-Film (H-a:Si)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8a9e7a"></div>AR-Coated Thin-Film</div>
         <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div>Butterfly Nanostructured — all absolute absorption %</div>
       </div>
     </div>
@@ -766,14 +766,14 @@
         <div class="aresult">
           <div class="aresult-label">FLAT THIN-FILM</div>
           <div class="aresult-sublabel">absolute absorption</div>
-          <div class="aresult-val" id="res-silicon" style="color:#ff4d4d">—</div>
+          <div class="aresult-val" id="res-silicon" style="color:#c4736a">—</div>
         </div>
         <div class="aresult">
           <div class="aresult-label">AR COATED</div>
           <div class="aresult-sublabel">absolute absorption</div>
-          <div class="aresult-val" id="res-ar" style="color:var(--accent2)">—</div>
+          <div class="aresult-val" id="res-ar" style="color:#8a9e7a">—</div>
         </div>
-        <div class="aresult" style="border-color:rgba(0,229,180,0.3); background:rgba(0,229,180,0.04)">
+        <div class="aresult" style="border-color:rgba(212,168,83,0.3); background:rgba(212,168,83,0.04)">
           <div class="aresult-label">NANOSTRUCTURED 🦋</div>
           <div class="aresult-sublabel">absorbed % (enhancement over flat)</div>
           <div class="aresult-val" id="res-nano" style="color:var(--accent)">—</div>
@@ -815,8 +815,8 @@
         <div class="dmeter">
           <div class="dmeter-label">FLAT THIN-FILM <span class="dmeter-sublabel">est.</span></div>
           <div class="dmeter-bar-wrap">
-            <div class="dmeter-bar" style="background:rgba(255,77,77,0.15)">
-              <div class="dmeter-fill" id="dm-flat" style="background:#ff4d4d"></div>
+            <div class="dmeter-bar" style="background:rgba(196,115,106,0.15)">
+              <div class="dmeter-fill" id="dm-flat" style="background:#c4736a"></div>
             </div>
             <div class="dmeter-val" id="dv-flat">—</div>
           </div>
@@ -824,8 +824,8 @@
         <div class="dmeter">
           <div class="dmeter-label">AR-COATED <span class="dmeter-sublabel">est.</span></div>
           <div class="dmeter-bar-wrap">
-            <div class="dmeter-bar" style="background:rgba(255,124,58,0.15)">
-              <div class="dmeter-fill" id="dm-ar" style="background:#ff7c3a"></div>
+            <div class="dmeter-bar" style="background:rgba(138,158,122,0.15)">
+              <div class="dmeter-fill" id="dm-ar" style="background:#8a9e7a"></div>
             </div>
             <div class="dmeter-val" id="dv-ar">—</div>
           </div>
@@ -833,8 +833,8 @@
         <div class="dmeter highlight-meter">
           <div class="dmeter-label">NANOSTRUCTURED 🦋 <span class="dmeter-sublabel">est.</span></div>
           <div class="dmeter-bar-wrap">
-            <div class="dmeter-bar" style="background:rgba(0,229,180,0.15)">
-              <div class="dmeter-fill" id="dm-nano" style="background:#00e5b4; box-shadow:0 0 10px rgba(0,229,180,0.5)"></div>
+            <div class="dmeter-bar" style="background:rgba(212,168,83,0.15)">
+              <div class="dmeter-fill" id="dm-nano" style="background:#d4a853; box-shadow:0 0 10px rgba(212,168,83,0.5)"></div>
             </div>
             <div class="dmeter-val" id="dv-nano">—</div>
           </div>
@@ -895,7 +895,7 @@
         <strong>DOI: 10.1126/sciadv.1700232</strong>
       </p>
     </div>
-    <div class="cite-box reveal" style="margin-top:16px; border-left-color:var(--accent3);">
+    <div class="cite-box reveal" style="margin-top:16px; border-left-color:#c4736a;">
       <p>
         <strong>Karlsruhe Institute of Technology (KIT) Press Release (2017).</strong>
         "Butterfly Wing Inspires Photovoltaics: Light Absorption Can Be Enhanced by Up to 200 Percent."
@@ -937,7 +937,7 @@
     particles.forEach(p=>{
       ctx.beginPath();
       ctx.arc(p.x%W, p.y%H, p.r, 0, Math.PI*2);
-      ctx.fillStyle=`rgba(0,229,180,${0.3+p.a*0.5})`;
+      ctx.fillStyle=`rgba(212,168,83,${0.25+p.a*0.4})`;
       ctx.fill();
       p.x+=p.vx; p.y+=p.vy;
       p.a=0.5+0.5*Math.sin(Date.now()*0.001+p.r*10);
@@ -972,28 +972,28 @@
         {
           label:'Flat Thin-Film (H-a:Si, no treatment)',
           data: flatTF,
-          borderColor:'#ff4d4d',
-          backgroundColor:'rgba(255,77,77,0.06)',
+          borderColor:'#c4736a',
+          backgroundColor:'rgba(196,115,106,0.08)',
           tension:0.4, fill:true, pointRadius:5,
-          pointBackgroundColor:'#ff4d4d',
+          pointBackgroundColor:'#c4736a',
           borderWidth:2,
         },
         {
           label:'AR-Coated Thin-Film (H-a:Si + AR)',
           data: arCoated,
-          borderColor:'#ff7c3a',
-          backgroundColor:'rgba(255,124,58,0.06)',
+          borderColor:'#8a9e7a',
+          backgroundColor:'rgba(138,158,122,0.08)',
           tension:0.4, fill:true, pointRadius:5,
-          pointBackgroundColor:'#ff7c3a',
+          pointBackgroundColor:'#8a9e7a',
           borderWidth:2,
         },
         {
           label:'Butterfly Nanostructured (H-a:Si + nanoholes) — absolute absorption %',
           data: nanoStr,
-          borderColor:'#00e5b4',
-          backgroundColor:'rgba(0,229,180,0.08)',
+          borderColor:'#d4a853',
+          backgroundColor:'rgba(212,168,83,0.1)',
           tension:0.4, fill:true, pointRadius:6,
-          pointBackgroundColor:'#00e5b4',
+          pointBackgroundColor:'#d4a853',
           borderWidth:2.5,
         }
       ]
@@ -1004,11 +1004,11 @@
       plugins:{
         legend:{ display:false },
         tooltip:{
-          backgroundColor:'rgba(13,26,34,0.95)',
-          borderColor:'rgba(0,229,180,0.3)',
+          backgroundColor:'rgba(42,18,24,0.97)',
+          borderColor:'rgba(212,168,83,0.3)',
           borderWidth:1,
-          titleColor:'#00e5b4',
-          bodyColor:'#e8f4f0',
+          titleColor:'#d4a853',
+          bodyColor:'#f0e6d3',
           padding:12,
           callbacks:{
             label(ctx){
@@ -1023,16 +1023,16 @@
       },
       scales:{
         x:{
-          grid:{ color:'rgba(255,255,255,0.04)' },
-          ticks:{ color:'#7a9ea8', font:{ family:'DM Mono', size:11 } },
-          title:{ display:true, text:'Angle of Incidence', color:'#7a9ea8', font:{family:'DM Mono',size:11} }
+          grid:{ color:'rgba(240,230,211,0.05)' },
+          ticks:{ color:'#9e7e72', font:{ family:'DM Mono', size:11 } },
+          title:{ display:true, text:'Angle of Incidence', color:'#9e7e72', font:{family:'DM Mono',size:11} }
         },
         y:{
-          grid:{ color:'rgba(255,255,255,0.04)' },
-          ticks:{ color:'#7a9ea8', font:{ family:'DM Mono', size:11 },
+          grid:{ color:'rgba(240,230,211,0.05)' },
+          ticks:{ color:'#9e7e72', font:{ family:'DM Mono', size:11 },
             callback:v=>v+'%'
           },
-          title:{ display:true, text:'Absolute Absorption — % of Incident Photons Absorbed', color:'#7a9ea8', font:{family:'DM Mono',size:10} }
+          title:{ display:true, text:'Absolute Absorption — % of Incident Photons Absorbed', color:'#9e7e72', font:{family:'DM Mono',size:10} }
         }
       }
     }
@@ -1082,7 +1082,7 @@
     const W=c.width;
     // shadow glow
     ctx.shadowBlur=20; ctx.shadowColor=color+'60';
-    ctx.fillStyle=isNano?'rgba(0,30,20,0.8)':'rgba(10,18,25,0.8)';
+    ctx.fillStyle=isNano?'rgba(40,25,5,0.85)':'rgba(25,10,14,0.85)';
     ctx.beginPath(); ctx.roundRect(x,y,w,h,8); ctx.fill();
     ctx.strokeStyle=color; ctx.lineWidth=isNano?2:1;
     ctx.stroke();
@@ -1095,7 +1095,7 @@
         const hy=y+4;
         const hr=2+Math.random()*4;
         ctx.beginPath(); ctx.arc(hx,hy,hr,0,Math.PI*2);
-        ctx.strokeStyle='rgba(0,229,180,0.35)';
+        ctx.strokeStyle='rgba(212,168,83,0.4)';
         ctx.lineWidth=0.6; ctx.stroke();
       }
     }
@@ -1111,7 +1111,7 @@
     ctx.fill();
 
     // label
-    ctx.fillStyle='#7a9ea8'; ctx.font='10px DM Mono';
+    ctx.fillStyle='#9e7e72'; ctx.font='10px DM Mono';
     ctx.textAlign='center';
     ctx.fillText(label.toUpperCase(), x+w/2, y+h+18);
     ctx.fillStyle=color; ctx.font='bold 13px Syne, sans-serif';
@@ -1125,13 +1125,13 @@
 
     // sky
     const skyGrad=ctx.createLinearGradient(0,0,0,H*0.45);
-    skyGrad.addColorStop(0,'rgba(10,30,50,0.6)');
+    skyGrad.addColorStop(0,'rgba(40,10,15,0.65)');
     skyGrad.addColorStop(1,'rgba(5,10,15,0)');
     ctx.fillStyle=skyGrad; ctx.fillRect(0,0,W,H*0.45);
 
     // ground line
     ctx.beginPath(); ctx.moveTo(0,H-60); ctx.lineTo(W,H-60);
-    ctx.strokeStyle='rgba(0,229,180,0.1)'; ctx.lineWidth=1; ctx.stroke();
+    ctx.strokeStyle='rgba(212,168,83,0.1)'; ctx.lineWidth=1; ctx.stroke();
 
     const rad=angle*Math.PI/180;
     // sun position
@@ -1140,7 +1140,7 @@
 
     // sun glow
     const sg=ctx.createRadialGradient(sunX,sunY,0,sunX,sunY,60);
-    sg.addColorStop(0,'rgba(255,230,100,0.35)');
+    sg.addColorStop(0,'rgba(255,220,140,0.4)');
     sg.addColorStop(1,'transparent');
     ctx.fillStyle=sg; ctx.beginPath(); ctx.arc(sunX,sunY,60,0,Math.PI*2); ctx.fill();
     ctx.fillStyle='rgba(255,240,140,0.9)'; ctx.beginPath(); ctx.arc(sunX,sunY,12,0,Math.PI*2); ctx.fill();
@@ -1159,7 +1159,7 @@
     const p3x=spacing*2.9-pW/2;
 
     // light rays to each panel
-    [[p1x,'#ff4d4d'],[p2x,'#ff7c3a'],[p3x,'#00e5b4']].forEach(([px,col])=>{
+    [[p1x,'#c4736a'],[p2x,'#8a9e7a'],[p3x,'#d4a853']].forEach(([px,col])=>{
       const pcx=px+pW/2;
       const numRays=5;
       for(let r=0;r<numRays;r++){
@@ -1171,14 +1171,14 @@
     });
 
     // draw panels
-    drawPanel(p1x, panelY, pW, panelH, 'Flat H-a:Si', si, '#ff4d4d', false);
-    drawPanel(p2x, panelY, pW, panelH, 'AR Coated', ar, '#ff7c3a', false);
-    drawPanel(p3x, panelY, pW, panelH, 'Nano 🦋', nano, '#00e5b4', true);
+    drawPanel(p1x, panelY, pW, panelH, 'Flat H-a:Si', si, '#c4736a', false);
+    drawPanel(p2x, panelY, pW, panelH, 'AR Coated', ar, '#8a9e7a', false);
+    drawPanel(p3x, panelY, pW, panelH, 'Nano 🦋', nano, '#d4a853', true);
 
     // angle arc indicator
     ctx.beginPath(); ctx.arc(W/2, H-60, 40, -Math.PI/2-rad, -Math.PI/2, false);
-    ctx.strokeStyle='rgba(0,229,180,0.4)'; ctx.lineWidth=1.5; ctx.stroke();
-    ctx.fillStyle='#7a9ea8'; ctx.font='10px DM Mono';
+    ctx.strokeStyle='rgba(212,168,83,0.5)'; ctx.lineWidth=1.5; ctx.stroke();
+    ctx.fillStyle='#9e7e72'; ctx.font='10px DM Mono';
     ctx.fillText(angle+'°', W/2+8, H-62);
 
     resSi.textContent=Math.round(si)+'%';
@@ -1335,18 +1335,18 @@
     // ── Sky gradient ──
     const skyGrad = ctx.createLinearGradient(0, 0, 0, H * 0.55);
     if(currentSky === 'overcast') {
-      skyGrad.addColorStop(0, 'rgba(40,55,70,0.95)');
-      skyGrad.addColorStop(1, 'rgba(20,30,40,0.4)');
+      skyGrad.addColorStop(0, 'rgba(50,20,25,0.95)');
+      skyGrad.addColorStop(1, 'rgba(25,10,14,0.4)');
     } else if(currentSky === 'dawn') {
-      skyGrad.addColorStop(0, 'rgba(20,10,30,0.95)');
-      skyGrad.addColorStop(0.5, 'rgba(80,30,10,0.7)');
-      skyGrad.addColorStop(1, 'rgba(10,15,20,0.2)');
+      skyGrad.addColorStop(0, 'rgba(20,5,8,0.95)');
+      skyGrad.addColorStop(0.5, 'rgba(100,30,20,0.7)');
+      skyGrad.addColorStop(1, 'rgba(15,5,8,0.2)');
     } else if(currentSky === 'hazy') {
-      skyGrad.addColorStop(0, 'rgba(15,30,50,0.9)');
-      skyGrad.addColorStop(1, 'rgba(10,20,30,0.3)');
+      skyGrad.addColorStop(0, 'rgba(30,10,15,0.9)');
+      skyGrad.addColorStop(1, 'rgba(20,8,12,0.3)');
     } else {
-      skyGrad.addColorStop(0, 'rgba(5,20,45,0.95)');
-      skyGrad.addColorStop(1, 'rgba(5,10,20,0.2)');
+      skyGrad.addColorStop(0, 'rgba(15,5,30,0.95)');
+      skyGrad.addColorStop(1, 'rgba(10,4,15,0.2)');
     }
     ctx.fillStyle = skyGrad;
     ctx.fillRect(0, 0, W, H * 0.55);
@@ -1386,9 +1386,9 @@
 
     // ── Ground / panel base line ──
     const groundY = H * 0.72;
-    ctx.fillStyle = 'rgba(8,15,10,0.6)';
+    ctx.fillStyle = 'rgba(20,8,10,0.7)';
     ctx.fillRect(0, groundY, W, H - groundY);
-    ctx.strokeStyle = 'rgba(0,229,180,0.08)';
+    ctx.strokeStyle = 'rgba(212,168,83,0.1)';
     ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(0,groundY); ctx.lineTo(W,groundY); ctx.stroke();
 
@@ -1397,7 +1397,7 @@
     const panelH = 80;
     const panelY = groundY - panelH;
     const positions = [W*0.22, W*0.5, W*0.78];
-    const panelColors = ['#ff4d4d','#ff7c3a','#00e5b4'];
+    const panelColors = ['#c4736a','#8a9e7a','#d4a853'];
     const panelLabels = ['Flat\nH-a:Si','AR\nCoated','Nano\n🦋'];
     const absVals = [dispFlat, dispAr, dispNano];
 
@@ -1413,7 +1413,7 @@
       ctx.shadowColor = color + '50';
 
       // Panel body
-      ctx.fillStyle = isNano ? 'rgba(0,25,18,0.92)' : 'rgba(10,18,28,0.88)';
+      ctx.fillStyle = isNano ? 'rgba(40,28,5,0.92)' : 'rgba(30,12,16,0.88)';
       ctx.beginPath(); ctx.roundRect(x, panelY, panelW, panelH, 6); ctx.fill();
       ctx.strokeStyle = color; ctx.lineWidth = isNano ? 1.8 : 1;
       ctx.beginPath(); ctx.roundRect(x, panelY, panelW, panelH, 6); ctx.stroke();
@@ -1426,7 +1426,7 @@
           const hy = panelY + 6;
           const hr = 2 + Math.sin(d*1.3+t*0.05)*1.5;
           ctx.beginPath(); ctx.arc(hx, hy, hr, 0, Math.PI*2);
-          ctx.strokeStyle = 'rgba(0,229,180,0.4)'; ctx.lineWidth=0.7; ctx.stroke();
+          ctx.strokeStyle = 'rgba(212,168,83,0.45)'; ctx.lineWidth=0.7; ctx.stroke();
         }
       }
 
@@ -1441,7 +1441,7 @@
       ctx.fill();
 
       // Label
-      ctx.fillStyle = '#7a9ea8'; ctx.font = '9px DM Mono';
+      ctx.fillStyle = '#9e7e72'; ctx.font = '9px DM Mono';
       ctx.textAlign = 'center';
       panelLabels[i].split('\n').forEach((line, li) => {
         ctx.fillText(line, cx, groundY + 16 + li*14);
@@ -1468,14 +1468,14 @@
       const targetPanel = Math.floor(ray.x * 3);
       const isAbsorbed  = startY > groundY * 0.6;
       const color = isAbsorbed && targetPanel === 2
-        ? `rgba(0,229,180,${ray.weight * 0.55})`
+        ? `rgba(212,168,83,${ray.weight * 0.55})`
         : isAbsorbed && targetPanel === 1
-        ? `rgba(255,124,58,${ray.weight * 0.35})`
+        ? `rgba(138,158,122,${ray.weight * 0.35})`
         : isAbsorbed
-        ? `rgba(255,77,77,${ray.weight * 0.25})`
+        ? `rgba(196,115,106,${ray.weight * 0.25})`
         : currentSky === 'dawn'
-        ? `rgba(255,140,80,${ray.weight * 0.3})`
-        : `rgba(255,230,120,${ray.weight * 0.25})`;
+        ? `rgba(220,120,80,${ray.weight * 0.3})`
+        : `rgba(240,210,160,${ray.weight * 0.25})`;
 
       ctx.beginPath();
       ctx.moveTo(startX, startY);
@@ -1488,7 +1488,7 @@
       if(isAbsorbed && targetPanel === 2 && Math.random() < 0.015) {
         ctx.beginPath();
         ctx.arc(startX + (Math.random()-0.5)*30, groundY - 20 - Math.random()*40, 2, 0, Math.PI*2);
-        ctx.fillStyle = 'rgba(0,229,180,0.6)';
+        ctx.fillStyle = 'rgba(212,168,83,0.7)';
         ctx.fill();
       }
     });
@@ -1496,7 +1496,7 @@
     // ── Reflected rays off flat & AR panels ──
     // Show rejected photons bouncing away from flat/AR
     if(t % 3 === 0 && Math.random() < 0.4) {
-      [[W*0.22,'#ff4d4d',0.3],[W*0.5,'#ff7c3a',0.2]].forEach(([px,col,op])=>{
+      [[W*0.22,'#c4736a',0.3],[W*0.5,'#8a9e7a',0.2]].forEach(([px,col,op])=>{
         const rx = px + (Math.random()-0.5)*40;
         ctx.beginPath();
         ctx.moveTo(rx, panelY + 4);
