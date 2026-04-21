@@ -299,98 +299,20 @@
   .spec-val { color:var(--text); font-weight:600; }
   .spec-val.accent { color:var(--accent); }
 
-  /* ─── ANGLE DEMO ─── */
-  #angle-section { background: var(--bg2); }
-  .angle-demo-wrap {
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:20px; padding:40px;
-    margin-top:40px;
-  }
-  #angleCanvas { width:100%; max-height:400px; display:block; }
-  .angle-controls {
-    display:flex; align-items:center; gap:24px;
-    margin-top:32px; justify-content:center;
-    flex-wrap:wrap;
-  }
-  .angle-slider-wrap {
-    display:flex; align-items:center; gap:16px;
-    background:var(--surface2);
-    padding:16px 24px; border-radius:12px;
-    border:1px solid var(--border);
-  }
-  .angle-slider-wrap label {
-    font-size:11px; color:var(--muted); letter-spacing:2px;
-    text-transform:uppercase;
-  }
-  #angleSlider {
-    -webkit-appearance:none; appearance:none;
-    width:200px; height:4px;
-    background: var(--surface2);
-    border-radius:10px; outline:none;
-    cursor:pointer;
-  }
-  #angleSlider::-webkit-slider-thumb {
-    -webkit-appearance:none;
-    width:18px; height:18px;
-    border-radius:50%; background:var(--accent);
-    box-shadow:0 0 12px var(--glow); cursor:pointer;
-  }
-  #angleDisplay {
-    font-family:'Syne',sans-serif; font-weight:800;
-    font-size:22px; color:var(--accent); min-width:60px;
-    text-align:center;
-  }
-  .angle-results {
-    display:grid; grid-template-columns:repeat(3,1fr);
-    gap:16px; margin-top:24px;
-  }
-  .aresult {
-    background:var(--surface2); border-radius:12px;
-    padding:16px; text-align:center;
-    border:1px solid var(--border);
-  }
-  .aresult-label { font-size:10px; color:var(--muted); letter-spacing:2px; }
-  .aresult-val {
-    font-family:'Syne',sans-serif; font-size:22px;
-    font-weight:800; margin-top:4px;
-    transition: color 0.3s;
-  }
-  .aresult-sublabel {
-    font-size:9px; color:var(--muted); letter-spacing:1px;
-    margin-top:2px; text-transform:uppercase;
-  }
-  .angle-footnote {
-    margin-top:20px;
-    background: rgba(0,229,180,0.04);
-    border: 1px solid var(--border);
-    border-radius:10px;
-    padding:12px 18px;
-    font-size:11px; color:var(--muted); line-height:1.7;
-    text-align:center;
-  }
-  .angle-footnote strong { color:var(--text); }
-  .fn-dot {
-    display:inline-block; width:8px; height:8px;
-    border-radius:50%; vertical-align:middle;
-    margin-right:3px;
-  }
-
-  /* ─── DIFFUSE LIGHT ─── */
-  #diffuse-section { background: var(--bg); }
-  .diffuse-wrap {
+  /* ─── NANOHOLE LIGHT TRAPPING ─── */
+  #nanohole-section { background: var(--bg2); }
+  .nanohole-wrap {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 20px; padding: 36px;
     margin-top: 40px;
   }
-  .diffuse-controls {
+  .nanohole-controls {
     display: flex; align-items: center;
-    gap: 24px; margin-bottom: 28px;
-    flex-wrap: wrap;
+    gap: 24px; margin-bottom: 24px; flex-wrap: wrap;
   }
-  .sky-btns { display: flex; gap: 10px; flex-wrap: wrap; }
-  .sky-btn {
+  .nanohole-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .nanohole-btn {
     background: var(--surface2);
     border: 1px solid var(--border);
     color: var(--muted); font-family: 'DM Mono', monospace;
@@ -398,78 +320,42 @@
     padding: 8px 16px; border-radius: 8px;
     cursor: pointer; transition: all 0.2s;
   }
-  .sky-btn:hover { border-color: var(--accent); color: var(--text); }
-  .sky-btn.active {
-    background: rgba(0,229,180,0.1);
+  .nanohole-btn:hover { border-color: var(--accent); color: var(--text); }
+  .nanohole-btn.active {
+    background: rgba(212,168,83,0.1);
     border-color: var(--accent); color: var(--accent);
   }
-  .sky-desc {
+  .nanohole-desc {
     font-size: 11px; color: var(--muted);
-    line-height: 1.6; max-width: 340px;
-    font-style: italic;
+    line-height: 1.6; max-width: 360px; font-style: italic;
   }
-  #diffuseCanvas {
+  #nanoholeCanvas {
     width: 100%; display: block;
-    border-radius: 12px; margin-bottom: 28px;
+    border-radius: 12px; margin-bottom: 24px;
+    background: var(--bg);
   }
-  .diffuse-meters {
+  .nanohole-stats {
     display: grid; grid-template-columns: repeat(3,1fr);
     gap: 16px; margin-bottom: 20px;
   }
-  .dmeter { }
-  .dmeter-label {
-    font-size: 10px; letter-spacing: 2px; color: var(--muted);
-    text-transform: uppercase; margin-bottom: 8px;
+  .nstat {
+    background: var(--surface2); border-radius: 12px;
+    padding: 16px; text-align: center;
+    border: 1px solid var(--border);
   }
-  .dmeter-bar-wrap { display: flex; align-items: center; gap: 12px; }
-  .dmeter-bar {
-    flex: 1; height: 10px; border-radius: 10px; overflow: hidden;
+  .nstat-highlight { border-color: rgba(212,168,83,0.3); background: rgba(212,168,83,0.05); }
+  .nstat-label { font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .nstat-val {
+    font-family: 'Playfair Display', serif; font-size: 22px;
+    font-weight: 700; color: var(--accent); margin: 6px 0 4px;
   }
-  .dmeter-fill {
-    height: 100%; border-radius: 10px;
-    width: 0%; transition: width 0.6s cubic-bezier(0.16,1,0.3,1);
-  }
-  .dmeter-val {
-    font-family: 'Playfair Display', serif; font-size: 15px;
-    font-weight: 800; min-width: 44px; text-align: right;
-  }
-  .highlight-meter .dmeter-label { color: var(--accent); }
-  .highlight-meter .dmeter-val { color: var(--accent); }
-  .diffuse-note {
-    font-size: 11px; color: var(--muted); text-align: center;
-    line-height: 1.7; padding: 12px 0 0;
-    border-top: 1px solid var(--border);
-    min-height: 20px; transition: opacity 0.3s;
-  }
-
-  .diffuse-disclaimer {
-    background: rgba(255,200,50,0.06);
-    border: 1px solid rgba(255,200,50,0.2);
-    border-radius: 10px; padding: 12px 16px;
+  .nstat-sub { font-size: 9px; color: var(--muted); letter-spacing: 1px; }
+  .nanohole-note {
     font-size: 11px; color: var(--muted); line-height: 1.7;
-    margin-bottom: 20px;
+    text-align: center; padding: 14px;
+    border-top: 1px solid var(--border);
   }
-  .diffuse-disclaimer strong { color: var(--text); }
-  .disclaimer-badge {
-    display: inline-block;
-    background: rgba(255,200,50,0.12);
-    border: 1px solid rgba(255,200,50,0.3);
-    color: #d4a853; font-size: 10px; letter-spacing: 1.5px;
-    padding: 2px 10px; border-radius: 20px;
-    margin-right: 8px; vertical-align: middle;
-  }
-  .dmeter-sublabel {
-    font-size: 9px; color: #d4a853;
-    letter-spacing: 1px; margin-left: 4px;
-    vertical-align: middle;
-  }
-  .diffuse-source {
-    margin-top: 14px;
-    font-size: 10px; color: var(--muted);
-    text-align: center; line-height: 1.6;
-    opacity: 0.7;
-  }
-  .diffuse-source em { color: var(--text); font-style: italic; }
+  .nanohole-note strong { color: var(--text); }
 
   /* ─── APPLICATIONS ─── */
   #apps { background:var(--bg); }
@@ -550,8 +436,7 @@
   <div class="nav-links">
     <a href="#compare">Comparison</a>
     <a href="#chart-section">Absorption</a>
-    <a href="#angle-section">Angle Demo</a>
-    <a href="#diffuse-section">Diffuse Light</a>
+    <a href="#nanohole-section">Light Trapping</a>
     <a href="#apps">Applications</a>
     <a href="#cite">Research</a>
   </div>
@@ -744,105 +629,46 @@
 
 
 
-<!-- INTERACTIVE ANGLE DEMO -->
-<section id="angle-section">
+<!-- NANOHOLE LIGHT TRAPPING MODEL -->
+<section id="nanohole-section">
   <div class="section-inner">
-    <div class="section-label">03 — Interactive Demonstration</div>
-    <h2>Rotate the <em>Sun</em></h2>
+    <div class="section-label">03 — Nanohole Light Trapping</div>
+    <h2>Inside the <em>Nanostructure</em></h2>
     <p class="lead">
-      All three cells use the same <strong>H-a:Si thin-film absorber</strong> — the only difference is the surface.
-      Values show absolute % of photons absorbed. The bracket on the nanostructured cell shows the enhancement multiplier over the flat baseline — the figure cited in the KIT paper.
+      Each disordered nanohole acts as a photon trap. Light that enters the hole is scattered laterally,
+      bouncing between the walls and dramatically increasing its path length inside the absorber — turning
+      a thin film into an effective deep absorber.
     </p>
-    <div class="angle-demo-wrap reveal">
-      <canvas id="angleCanvas" height="380"></canvas>
-      <div class="angle-controls">
-        <div class="angle-slider-wrap">
-          <label>ANGLE OF INCIDENCE</label>
-          <input type="range" id="angleSlider" min="0" max="70" value="10">
-          <div id="angleDisplay">10°</div>
+    <div class="nanohole-wrap reveal">
+      <div class="nanohole-controls">
+        <div class="nanohole-btns">
+          <button class="nanohole-btn active" data-mode="single">Single Photon</button>
+          <button class="nanohole-btn" data-mode="multi">Multi-Ray</button>
+          <button class="nanohole-btn" data-mode="compare">vs Flat Surface</button>
+        </div>
+        <div class="nanohole-desc" id="nanoholeDesc">Watch a single photon enter a nanohole and bounce between the walls, each reflection increasing absorption.</div>
+      </div>
+      <canvas id="nanoholeCanvas"></canvas>
+      <div class="nanohole-stats">
+        <div class="nstat">
+          <div class="nstat-label">PATH LENGTH MULTIPLIER</div>
+          <div class="nstat-val" id="pathMultiplier">—</div>
+          <div class="nstat-sub">vs direct pass-through</div>
+        </div>
+        <div class="nstat">
+          <div class="nstat-label">ABSORPTION EVENTS</div>
+          <div class="nstat-val" id="absorptionCount">—</div>
+          <div class="nstat-sub">interactions with absorber walls</div>
+        </div>
+        <div class="nstat nstat-highlight">
+          <div class="nstat-label">NANOHOLE DIAMETER</div>
+          <div class="nstat-val">133–343 nm</div>
+          <div class="nstat-sub">disordered sizing — KIT research</div>
         </div>
       </div>
-      <div class="angle-results">
-        <div class="aresult">
-          <div class="aresult-label">FLAT THIN-FILM</div>
-          <div class="aresult-sublabel">absolute absorption</div>
-          <div class="aresult-val" id="res-silicon" style="color:#c4736a">—</div>
-        </div>
-        <div class="aresult">
-          <div class="aresult-label">AR COATED</div>
-          <div class="aresult-sublabel">absolute absorption</div>
-          <div class="aresult-val" id="res-ar" style="color:#8a9e7a">—</div>
-        </div>
-        <div class="aresult" style="border-color:rgba(212,168,83,0.3); background:rgba(212,168,83,0.04)">
-          <div class="aresult-label">NANOSTRUCTURED 🦋</div>
-          <div class="aresult-sublabel">absorbed % (enhancement over flat)</div>
-          <div class="aresult-val" id="res-nano" style="color:var(--accent)">—</div>
-        </div>
-      </div>
-      <div class="angle-footnote">
-        All three panels are the same material: <strong>H-a:Si thin-film</strong>.
-        &nbsp;|&nbsp; Values show <strong>absolute % of incident photons absorbed</strong>.
-        &nbsp;|&nbsp; The number in brackets for 🦋 is the <strong>enhancement over the flat baseline</strong> at that angle — this is the figure cited in the KIT / Science Advances 2017 paper.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DIFFUSE LIGHT SIM -->
-<section id="diffuse-section">
-  <div class="section-inner">
-    <div class="section-label">04 — Diffuse Light Simulation</div>
-    <h2>When the Sky <em>Scatters</em><br>the Sun</h2>
-    <p class="lead">
-      On overcast days, sunlight arrives from hundreds of directions simultaneously — no single beam, just a hemisphere of diffuse photons. Toggle between sky conditions and watch how each panel responds in real time.
-    </p>
-    <div class="diffuse-wrap reveal">
-      <div class="diffuse-controls">
-        <div class="sky-btns">
-          <button class="sky-btn active" data-sky="clear">☀️ Clear Sky</button>
-          <button class="sky-btn" data-sky="hazy">🌤 Hazy</button>
-          <button class="sky-btn" data-sky="overcast">☁️ Overcast</button>
-          <button class="sky-btn" data-sky="dawn">🌅 Dawn / Dusk</button>
-        </div>
-        <div class="sky-desc" id="skyDesc">Direct sunlight at ~15° elevation. Most light arrives from one dominant direction.</div>
-      </div>
-      <canvas id="diffuseCanvas"></canvas>
-      <div class="diffuse-disclaimer">
-        <span class="disclaimer-badge">⚠ Modelled Estimates</span>
-        Values below are calculated from KIT's published angle-enhancement curve (Science Advances 2017), weighted across each sky condition's photon angle distribution. They are <strong>not directly measured figures from the paper</strong>.
-      </div>
-      <div class="diffuse-meters">
-        <div class="dmeter">
-          <div class="dmeter-label">FLAT THIN-FILM <span class="dmeter-sublabel">est.</span></div>
-          <div class="dmeter-bar-wrap">
-            <div class="dmeter-bar" style="background:rgba(196,115,106,0.15)">
-              <div class="dmeter-fill" id="dm-flat" style="background:#c4736a"></div>
-            </div>
-            <div class="dmeter-val" id="dv-flat">—</div>
-          </div>
-        </div>
-        <div class="dmeter">
-          <div class="dmeter-label">AR-COATED <span class="dmeter-sublabel">est.</span></div>
-          <div class="dmeter-bar-wrap">
-            <div class="dmeter-bar" style="background:rgba(138,158,122,0.15)">
-              <div class="dmeter-fill" id="dm-ar" style="background:#8a9e7a"></div>
-            </div>
-            <div class="dmeter-val" id="dv-ar">—</div>
-          </div>
-        </div>
-        <div class="dmeter highlight-meter">
-          <div class="dmeter-label">NANOSTRUCTURED 🦋 <span class="dmeter-sublabel">est.</span></div>
-          <div class="dmeter-bar-wrap">
-            <div class="dmeter-bar" style="background:rgba(212,168,83,0.15)">
-              <div class="dmeter-fill" id="dm-nano" style="background:#d4a853; box-shadow:0 0 10px rgba(212,168,83,0.5)"></div>
-            </div>
-            <div class="dmeter-val" id="dv-nano">—</div>
-          </div>
-        </div>
-      </div>
-      <div class="diffuse-note" id="diffuseNote"></div>
-      <div class="diffuse-source">
-        📄 Source for enhancement curve: Siddique et al., <em>Science Advances</em> 3(10), e1700232 (2017) · DOI: 10.1126/sciadv.1700232
+      <div class="nanohole-note">
+        The <strong>disordered arrangement</strong> and <strong>varying diameters</strong> of the nanoholes are key —
+        periodic holes of uniform size only absorb one wavelength. The chaos is the feature.
       </div>
     </div>
   </div>
@@ -851,7 +677,7 @@
 <!-- APPLICATIONS -->
 <section id="apps">
   <div class="section-inner">
-    <div class="section-label">05 — Real-World Impact</div>
+    <div class="section-label">04 — Real-World Impact</div>
     <h2>Where This <em>Technology</em><br>Changes Everything</h2>
     <p class="lead">
       Because these nanostructures can be applied to any thin-film PV technology at industrial scale,
@@ -885,7 +711,7 @@
 <!-- CITATION -->
 <section id="cite">
   <div class="section-inner">
-    <div class="section-label">06 — Source & Citation</div>
+    <div class="section-label">05 — Source & Citation</div>
     <h2>Research <em>Reference</em></h2>
     <div class="cite-box reveal">
       <p>
@@ -1041,496 +867,728 @@
 
 
 
-// ─────────────────────────────────────────────
-// INTERACTIVE ANGLE DEMO
-// ─────────────────────────────────────────────
-(function(){
-  const c=document.getElementById('angleCanvas');
-  const ctx=c.getContext('2d');
-  const slider=document.getElementById('angleSlider');
-  const dispEl=document.getElementById('angleDisplay');
-  const resSi=document.getElementById('res-silicon');
-  const resAR=document.getElementById('res-ar');
-  const resNano=document.getElementById('res-nano');
-  let angle=10, t=0;
 
-  // absorption models — all absolute % of incident photons absorbed
-  // Flat H-a:Si thin-film: ~47% at 0°, cos^1.8 falloff
-  function flatAbsorption(a){
-    return Math.max(3, 47*Math.pow(Math.cos(a*Math.PI/180),1.8));
-  }
-  // AR-coated H-a:Si: ~63% at 0°, gentler falloff
-  function arAbsorption(a){
-    return Math.max(6, 63*Math.pow(Math.cos(a*Math.PI/180),1.3));
-  }
-  // Nanostructured: flat baseline × (1 + enhancement/100)
-  // Enhancement rises from +97% at 0° to +207% at ~50° then falls
-  function nanoEnhancement(a){
-    return 97 + (a/50)*110 * Math.exp(-Math.pow((a-50)/35,2));
-  }
-  function nanoAbsorption(a){
-    return Math.min(95, flatAbsorption(a) * (1 + nanoEnhancement(a)/100));
-  }
 
-  function resize(){
-    c.width=c.offsetWidth||800;
-    c.height=380;
-  }
-  resize(); window.addEventListener('resize', resize);
 
-  function drawPanel(x, y, w, h, label, absVal, color, isNano){
-    const W=c.width;
-    // shadow glow
-    ctx.shadowBlur=20; ctx.shadowColor=color+'60';
-    ctx.fillStyle=isNano?'rgba(40,25,5,0.85)':'rgba(25,10,14,0.85)';
-    ctx.beginPath(); ctx.roundRect(x,y,w,h,8); ctx.fill();
-    ctx.strokeStyle=color; ctx.lineWidth=isNano?2:1;
-    ctx.stroke();
-    ctx.shadowBlur=0;
 
-    // surface texture for nano
-    if(isNano){
-      for(let i=0;i<15;i++){
-        const hx=x+10+Math.random()*w*0.8;
-        const hy=y+4;
-        const hr=2+Math.random()*4;
-        ctx.beginPath(); ctx.arc(hx,hy,hr,0,Math.PI*2);
-        ctx.strokeStyle='rgba(212,168,83,0.4)';
-        ctx.lineWidth=0.6; ctx.stroke();
-      }
-    }
 
-    // absorption fill bar (inside panel)
-    const fillH=(absVal/210)*(h*0.6);
-    const grad=ctx.createLinearGradient(x,y+h,x,y+h-fillH);
-    grad.addColorStop(0,color+'aa');
-    grad.addColorStop(1,color+'22');
-    ctx.fillStyle=grad;
-    ctx.beginPath();
-    ctx.roundRect(x+4,y+h-fillH-4,w-8,fillH,4);
-    ctx.fill();
-
-    // label
-    ctx.fillStyle='#9e7e72'; ctx.font='10px DM Mono';
-    ctx.textAlign='center';
-    ctx.fillText(label.toUpperCase(), x+w/2, y+h+18);
-    ctx.fillStyle=color; ctx.font='bold 13px Syne, sans-serif';
-    ctx.fillText(isNano?'+'+Math.round(absVal)+'%':Math.round(absVal)+'%', x+w/2, y+h+34);
-    ctx.textAlign='left';
-  }
-
-  function draw(){
-    const W=c.width, H=c.height;
-    ctx.clearRect(0,0,W,H);
-
-    // sky
-    const skyGrad=ctx.createLinearGradient(0,0,0,H*0.45);
-    skyGrad.addColorStop(0,'rgba(40,10,15,0.65)');
-    skyGrad.addColorStop(1,'rgba(5,10,15,0)');
-    ctx.fillStyle=skyGrad; ctx.fillRect(0,0,W,H*0.45);
-
-    // ground line
-    ctx.beginPath(); ctx.moveTo(0,H-60); ctx.lineTo(W,H-60);
-    ctx.strokeStyle='rgba(212,168,83,0.1)'; ctx.lineWidth=1; ctx.stroke();
-
-    const rad=angle*Math.PI/180;
-    // sun position
-    const sunX=W*0.5 - Math.sin(rad)*W*0.4;
-    const sunY=60 + Math.abs(Math.sin(rad))*40;
-
-    // sun glow
-    const sg=ctx.createRadialGradient(sunX,sunY,0,sunX,sunY,60);
-    sg.addColorStop(0,'rgba(255,220,140,0.4)');
-    sg.addColorStop(1,'transparent');
-    ctx.fillStyle=sg; ctx.beginPath(); ctx.arc(sunX,sunY,60,0,Math.PI*2); ctx.fill();
-    ctx.fillStyle='rgba(255,240,140,0.9)'; ctx.beginPath(); ctx.arc(sunX,sunY,12,0,Math.PI*2); ctx.fill();
-
-    // three panels
-    const panelY=H-250, panelH=180;
-    const spacing=W/(4);
-    const pW=Math.min(120, spacing-30);
-
-    const si=flatAbsorption(angle);
-    const ar=arAbsorption(angle);
-    const nano=nanoAbsorption(angle);
-
-    const p1x=spacing*0.7-pW/2;
-    const p2x=spacing*1.8-pW/2;
-    const p3x=spacing*2.9-pW/2;
-
-    // light rays to each panel
-    [[p1x,'#c4736a'],[p2x,'#8a9e7a'],[p3x,'#d4a853']].forEach(([px,col])=>{
-      const pcx=px+pW/2;
-      const numRays=5;
-      for(let r=0;r<numRays;r++){
-        const tx=pcx+(r-2)*12;
-        const ty=panelY;
-        ctx.beginPath(); ctx.moveTo(sunX,sunY); ctx.lineTo(tx,ty);
-        ctx.strokeStyle=col+'44'; ctx.lineWidth=1; ctx.stroke();
-      }
-    });
-
-    // draw panels
-    drawPanel(p1x, panelY, pW, panelH, 'Flat H-a:Si', si, '#c4736a', false);
-    drawPanel(p2x, panelY, pW, panelH, 'AR Coated', ar, '#8a9e7a', false);
-    drawPanel(p3x, panelY, pW, panelH, 'Nano 🦋', nano, '#d4a853', true);
-
-    // angle arc indicator
-    ctx.beginPath(); ctx.arc(W/2, H-60, 40, -Math.PI/2-rad, -Math.PI/2, false);
-    ctx.strokeStyle='rgba(212,168,83,0.5)'; ctx.lineWidth=1.5; ctx.stroke();
-    ctx.fillStyle='#9e7e72'; ctx.font='10px DM Mono';
-    ctx.fillText(angle+'°', W/2+8, H-62);
-
-    resSi.textContent=Math.round(si)+'%';
-    resAR.textContent=Math.round(ar)+'%';
-    resNano.textContent=Math.round(nano)+'% (+'+Math.round(nanoEnhancement(angle))+'%)';
-
-    t++;
-  }
-
-  slider.addEventListener('input',()=>{
-    angle=parseInt(slider.value);
-    dispEl.textContent=angle+'°';
-  });
-
-  function loop(){ draw(); requestAnimationFrame(loop); }
-  loop();
-})();
 
 // ─────────────────────────────────────────────
-// DIFFUSE LIGHT SIMULATION
+// NANOHOLE LIGHT TRAPPING MODEL
 // ─────────────────────────────────────────────
 (function(){
-  const canvas = document.getElementById('diffuseCanvas');
+  const canvas = document.getElementById('nanoholeCanvas');
   if(!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  // Sky condition configs
-  const SKY = {
-    clear: {
-      label: 'Clear Sky',
-      desc: 'Direct sunlight at ~15° elevation. Most light arrives from one dominant direction.',
-      // ray distribution: [angle_deg, weight] — mostly direct, narrow spread
-      rays: genRays(160, 'direct'),
-      flatAbs: 38, arAbs: 55, nanoAbs: 85,
-      nanoBoost: '+124%',
-      note: 'Even in direct sunlight, nanostructured cells outperform — but the gap is largest in diffuse conditions.',
-      cloudOpacity: 0, sunVisible: true, sunElevation: 0.72
-    },
-    hazy: {
-      label: 'Hazy / Partly Cloudy',
-      desc: 'Light scattered by cloud edges and aerosols. ~40% diffuse, ~60% direct.',
-      rays: genRays(160, 'hazy'),
-      flatAbs: 29, arAbs: 42, nanoAbs: 79,
-      nanoBoost: '+172%',
-      note: 'AR coatings begin losing ground as diffuse fraction increases — they are tuned for one angle.',
-      cloudOpacity: 0.35, sunVisible: true, sunElevation: 0.65
-    },
-    overcast: {
-      label: 'Overcast / Cloudy',
-      desc: 'No direct beam — light arrives from all directions across the full sky hemisphere.',
-      rays: genRays(160, 'diffuse'),
-      flatAbs: 18, arAbs: 24, nanoAbs: 62,
-      nanoBoost: '+244%',
-      note: 'Under full overcast, flat thin-film and AR coatings collapse. Nanostructured cells maintain ~3.4× higher output.',
-      cloudOpacity: 0.85, sunVisible: false, sunElevation: 0.5
-    },
-    dawn: {
-      label: 'Dawn / Dusk',
-      desc: 'Sun near horizon (~5°). Extremely oblique light, heavily scattered by atmosphere.',
-      rays: genRays(160, 'dawn'),
-      flatAbs: 8, arAbs: 11, nanoAbs: 51,
-      nanoBoost: '+207%',
-      note: 'At dawn and dusk, conventional cells produce almost nothing. The nanostructure\'s angle-insensitivity gives it an extraordinary advantage.',
-      cloudOpacity: 0.2, sunVisible: true, sunElevation: 0.97
-    }
-  };
+  const C_BG      = '#0f0608';
+  const C_SURFACE = '#2a1218';
+  const C_WALL    = '#d4a853';
+  const C_MUTED   = '#9e7e72';
 
-  function genRays(n, type) {
-    const rays = [];
-    for(let i=0; i<n; i++) {
-      let angle, weight, speed;
-      if(type === 'direct') {
-        // 80% rays clustered near 15° (direct sun), 20% scattered
-        if(Math.random() < 0.80) {
-          angle = (10 + Math.random() * 20) * Math.PI / 180;
-          weight = 0.9 + Math.random() * 0.1;
-        } else {
-          angle = Math.random() * Math.PI;
-          weight = 0.2 + Math.random() * 0.2;
-        }
-      } else if(type === 'hazy') {
-        if(Math.random() < 0.55) {
-          angle = (15 + Math.random() * 30) * Math.PI / 180;
-          weight = 0.7 + Math.random() * 0.3;
-        } else {
-          angle = Math.random() * Math.PI;
-          weight = 0.3 + Math.random() * 0.4;
-        }
-      } else if(type === 'diffuse') {
-        // Fully hemispherical — Lambertian distribution
-        angle = Math.random() * Math.PI;
-        weight = 0.3 + Math.random() * 0.5;
-      } else if(type === 'dawn') {
-        // Most rays extremely oblique (80–90°)
-        if(Math.random() < 0.7) {
-          angle = (75 + Math.random() * 20) * Math.PI / 180;
-          weight = 0.5 + Math.random() * 0.4;
-        } else {
-          angle = Math.random() * Math.PI;
-          weight = 0.2 + Math.random() * 0.3;
-        }
-      }
-      rays.push({
-        angle,
-        weight,
-        x: Math.random(),        // normalized x start
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.4 + Math.random() * 0.8,
-        length: 60 + Math.random() * 80,
-        active: Math.random() > 0.4
-      });
-    }
-    return rays;
-  }
-
-  let currentSky = 'clear';
-  let targetFlat = SKY.clear.flatAbs;
-  let targetAr   = SKY.clear.arAbs;
-  let targetNano = SKY.clear.nanoAbs;
-  let dispFlat = 0, dispAr = 0, dispNano = 0;
+  let mode = 'single';
   let t = 0;
+  let totalPathLen = 0, totalBounces = 0;
 
-  function resize() {
+  // ── Resize ──
+  function resize(){
     canvas.width  = canvas.offsetWidth || 900;
-    canvas.height = 400;
+    canvas.height = 420;
   }
   resize();
   window.addEventListener('resize', resize);
 
-  // Button logic
-  document.querySelectorAll('.sky-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.sky-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentSky = btn.dataset.sky;
-      const cfg = SKY[currentSky];
-      document.getElementById('skyDesc').textContent = cfg.desc;
-      document.getElementById('diffuseNote').textContent = cfg.note;
-      targetFlat = cfg.flatAbs;
-      targetAr   = cfg.arAbs;
-      targetNano = cfg.nanoAbs;
+  // ── Hex geometry ──
+  // pointy-top hex: vertex i at angle PI/6 + i*PI/3
+  function hexVerts(cx, cy, r){
+    const v = [];
+    for(let i=0;i<6;i++){
+      const a = Math.PI/6 + i*(Math.PI/3);
+      v.push({ x: cx + r*Math.cos(a), y: cy + r*Math.sin(a) });
+    }
+    return v;
+  }
+
+  // Return the 6 wall segments of a hex as {p1,p2,nx,ny} (nx,ny = inward normal)
+  function hexWalls(cx, cy, r){
+    const v = hexVerts(cx, cy, r);
+    const walls = [];
+    for(let i=0;i<6;i++){
+      const a = v[i], b = v[(i+1)%6];
+      // Wall direction
+      const dx = b.x-a.x, dy = b.y-a.y;
+      const len = Math.hypot(dx,dy);
+      // outward normal (rotate wall dir 90° CW)
+      let nx = dy/len, ny = -dx/len;
+      // ensure it points outward from centre
+      const mx = (a.x+b.x)/2 - cx, my = (a.y+b.y)/2 - cy;
+      if(mx*nx + my*ny < 0){ nx=-nx; ny=-ny; }
+      walls.push({ p1:a, p2:b, nx, ny });
+    }
+    return walls;
+  }
+
+  // Is point inside convex hex? (all 6 half-planes)
+  function insideHex(px, py, walls){
+    for(const w of walls){
+      const dx = px - w.p1.x, dy = py - w.p1.y;
+      if(dx*w.nx + dy*w.ny > 0) return false; // outside this wall
+    }
+    return true;
+  }
+
+  // Reflect velocity off the nearest wall that the photon just crossed
+  // Returns true if reflected
+  function reflectOffHex(ph, walls){
+    // Find the wall the photon is closest to / just past
+    let best = null, bestDist = Infinity;
+    for(const w of walls){
+      // signed distance from wall line (positive = outside)
+      const dx = ph.x - w.p1.x, dy = ph.y - w.p1.y;
+      const d = dx*w.nx + dy*w.ny;
+      if(d > 0 && d < bestDist){ bestDist = d; best = w; }
+    }
+    if(!best) return false;
+    // Reflect velocity: v' = v - 2(v·n)n
+    const dot = ph.vx*best.nx + ph.vy*best.ny;
+    ph.vx -= 2*dot*best.nx;
+    ph.vy -= 2*dot*best.ny;
+    // Push back inside by nudging along inward normal
+    ph.x -= best.nx*(bestDist+0.5);
+    ph.y -= best.ny*(bestDist+0.5);
+    ph.bounces++;
+    ph.lastWall = best;
+    return true;
+  }
+
+  // ── Three holes layout ──
+  function getHoles(W, H){
+    const r = Math.min(W/9, 62);
+    const cy = H*0.60;   // centred in the new film zone (0.38–0.82)
+    return [
+      { cx:W*0.22, cy, r },
+      { cx:W*0.50, cy, r },
+      { cx:W*0.78, cy, r },
+    ];
+  }
+
+  // ── Draw one hex hole with walls lit up ──
+  function drawHex(h, glowAmt, litWall){
+    const verts = hexVerts(h.cx, h.cy, h.r);
+    // Dark interior
+    ctx.beginPath();
+    verts.forEach((v,i)=>i===0?ctx.moveTo(v.x,v.y):ctx.lineTo(v.x,v.y));
+    ctx.closePath();
+    ctx.fillStyle = C_BG;
+    ctx.fill();
+    // Optional warm glow
+    if(glowAmt > 0.01){
+      ctx.beginPath();
+      verts.forEach((v,i)=>i===0?ctx.moveTo(v.x,v.y):ctx.lineTo(v.x,v.y));
+      ctx.closePath();
+      ctx.fillStyle = `rgba(212,168,83,${glowAmt*0.22})`;
+      ctx.fill();
+    }
+    // Draw each wall; highlight the one just reflected off
+    const walls = hexWalls(h.cx, h.cy, h.r);
+    walls.forEach((w, wi) => {
+      const isLit = litWall && w===litWall;
+      ctx.beginPath();
+      ctx.moveTo(w.p1.x, w.p1.y);
+      ctx.lineTo(w.p2.x, w.p2.y);
+      ctx.strokeStyle = isLit ? '#f0e6d3' : `rgba(212,168,83,0.55)`;
+      ctx.lineWidth = isLit ? 2.5 : 1.2;
+      ctx.stroke();
     });
-  });
-  // Set initial note
-  document.getElementById('diffuseNote').textContent = SKY.clear.note;
 
-  function lerp(a, b, t) { return a + (b - a) * t; }
+    // Draw ridges above the hole (funnelling structures)
+    drawRidges(h);
+  }
 
-  function drawScene() {
-    const W = canvas.width, H = canvas.height;
-    const cfg = SKY[currentSky];
-    ctx.clearRect(0, 0, W, H);
+  // ── Ridges: V-shaped raised structures that funnel photons into the hole ──
+  // In real butterfly wing scales, chitin ridges between scale structures
+  // redirect oblique light into the nanohole openings below.
+  function getRidgeGeom(h){
+    // Top centre of hex mouth (where photons enter)
+    const topY  = h.cy - h.r;
+    const halfW = h.r * 0.82;       // width of the funnel at mouth
+    const ridgeH = h.r * 0.55;      // how tall the ridge walls extend upward
+    const ridgeW = h.r * 1.6;       // total span of the funnel at the top
 
-    // ── Sky gradient ──
-    const skyGrad = ctx.createLinearGradient(0, 0, 0, H * 0.55);
-    if(currentSky === 'overcast') {
-      skyGrad.addColorStop(0, 'rgba(50,20,25,0.95)');
-      skyGrad.addColorStop(1, 'rgba(25,10,14,0.4)');
-    } else if(currentSky === 'dawn') {
-      skyGrad.addColorStop(0, 'rgba(20,5,8,0.95)');
-      skyGrad.addColorStop(0.5, 'rgba(100,30,20,0.7)');
-      skyGrad.addColorStop(1, 'rgba(15,5,8,0.2)');
-    } else if(currentSky === 'hazy') {
-      skyGrad.addColorStop(0, 'rgba(30,10,15,0.9)');
-      skyGrad.addColorStop(1, 'rgba(20,8,12,0.3)');
-    } else {
-      skyGrad.addColorStop(0, 'rgba(15,5,30,0.95)');
-      skyGrad.addColorStop(1, 'rgba(10,4,15,0.2)');
+    // Left ridge: from outer-left tip down to left edge of hole mouth
+    const lTip  = { x: h.cx - ridgeW*0.5, y: topY - ridgeH };
+    const lBase = { x: h.cx - halfW,       y: topY };
+
+    // Right ridge: from outer-right tip down to right edge of hole mouth
+    const rTip  = { x: h.cx + ridgeW*0.5, y: topY - ridgeH };
+    const rBase = { x: h.cx + halfW,       y: topY };
+
+    // Centre peak (small raised bump between the two ridges at the very top)
+    const cTip  = { x: h.cx,               y: topY - ridgeH * 0.55 };
+
+    return { lTip, lBase, rTip, rBase, cTip, topY };
+  }
+
+  function drawRidges(h){
+    const { lTip, lBase, rTip, rBase, cTip, topY } = getRidgeGeom(h);
+
+    // Fill the funnel interior with a very faint surface colour
+    ctx.beginPath();
+    ctx.moveTo(lTip.x, lTip.y);
+    ctx.lineTo(lBase.x, lBase.y);
+    ctx.lineTo(rBase.x, rBase.y);
+    ctx.lineTo(rTip.x, rTip.y);
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(42,18,24,0.7)';
+    ctx.fill();
+
+    // Left ridge wall — angled inward toward hole
+    ctx.beginPath();
+    ctx.moveTo(lTip.x, lTip.y);
+    ctx.lineTo(lBase.x, lBase.y);
+    ctx.strokeStyle = 'rgba(212,168,83,0.75)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Right ridge wall — mirror
+    ctx.beginPath();
+    ctx.moveTo(rTip.x, rTip.y);
+    ctx.lineTo(rBase.x, rBase.y);
+    ctx.strokeStyle = 'rgba(212,168,83,0.75)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Centre spine
+    ctx.beginPath();
+    ctx.moveTo(cTip.x, cTip.y);
+    ctx.lineTo(h.cx, topY);
+    ctx.strokeStyle = 'rgba(212,168,83,0.35)';
+    ctx.lineWidth = 0.8;
+    ctx.stroke();
+
+    // Small tick marks along each ridge (scale texture)
+    const steps = 3;
+    for(let s=1; s<=steps; s++){
+      const frac = s/(steps+1);
+      // Left ridge ticks
+      const lx = lTip.x + (lBase.x - lTip.x)*frac;
+      const ly = lTip.y + (lBase.y - lTip.y)*frac;
+      // Normal to ridge = perpendicular, pointing right-inward
+      const ldx = lBase.x-lTip.x, ldy = lBase.y-lTip.y;
+      const llen = Math.hypot(ldx,ldy);
+      const lnx = -ldy/llen, lny = ldx/llen; // left-facing normal
+      ctx.beginPath();
+      ctx.moveTo(lx, ly);
+      ctx.lineTo(lx + lnx*5, ly + lny*5);
+      ctx.strokeStyle='rgba(212,168,83,0.3)'; ctx.lineWidth=0.8; ctx.stroke();
+
+      // Right ridge ticks (mirror)
+      const rx = rTip.x + (rBase.x - rTip.x)*frac;
+      const ry = rTip.y + (rBase.y - rTip.y)*frac;
+      ctx.beginPath();
+      ctx.moveTo(rx, ry);
+      ctx.lineTo(rx - lnx*5, ry + lny*5);
+      ctx.strokeStyle='rgba(212,168,83,0.3)'; ctx.lineWidth=0.8; ctx.stroke();
     }
-    ctx.fillStyle = skyGrad;
-    ctx.fillRect(0, 0, W, H * 0.55);
 
-    // ── Clouds ──
-    if(cfg.cloudOpacity > 0) {
-      ctx.save();
-      ctx.globalAlpha = cfg.cloudOpacity;
-      [[0.15,0.08,90,28],[0.38,0.04,130,22],[0.6,0.10,110,25],[0.8,0.06,95,20],[0.25,0.14,80,18]].forEach(([nx,ny,rw,rh])=>{
-        const cx = nx*W + Math.sin(t*0.003+nx*10)*8;
-        const cy = ny*H;
-        const cg = ctx.createRadialGradient(cx,cy,0,cx,cy,rw);
-        cg.addColorStop(0,'rgba(180,200,220,0.6)');
-        cg.addColorStop(1,'transparent');
-        ctx.fillStyle = cg;
-        ctx.beginPath();
-        ctx.ellipse(cx, cy, rw, rh, 0, 0, Math.PI*2);
-        ctx.fill();
-      });
-      ctx.restore();
+    // Label on first hole only (detected by index — skip, we'll label in drawFilm)
+  }
+
+  // ── Ridge physics: if a photon hits a ridge wall, redirect it toward the hole ──
+  // Returns true if the photon was deflected by a ridge
+  function applyRidgePhysics(ph){
+    const { lTip, lBase, rTip, rBase, topY } = getRidgeGeom(ph.hole);
+
+    // Only active if photon is above the hole mouth
+    if(ph.y > topY || ph.y < lTip.y - 4) return false;
+
+    // Check if photon is to the left of the left ridge wall
+    // Left ridge line: lTip → lBase
+    function sideOfLine(ax,ay,bx,by,px,py){
+      return (bx-ax)*(py-ay) - (by-ay)*(px-ax);
     }
 
-    // ── Sun ──
-    if(cfg.sunVisible) {
-      const sunX = W * 0.72;
-      const sunY = cfg.sunElevation * H * 0.5;
-      const sunColor = currentSky === 'dawn' ? 'rgba(255,140,60,' : 'rgba(255,230,120,';
-      // outer glow
-      const sg = ctx.createRadialGradient(sunX,sunY,0,sunX,sunY,currentSky==='dawn'?55:40);
-      sg.addColorStop(0, sunColor+'0.3)');
-      sg.addColorStop(1,'transparent');
-      ctx.fillStyle = sg;
-      ctx.beginPath(); ctx.arc(sunX,sunY,currentSky==='dawn'?55:40,0,Math.PI*2); ctx.fill();
-      ctx.fillStyle = sunColor+'0.95)';
-      ctx.beginPath(); ctx.arc(sunX,sunY,currentSky==='dawn'?9:14,0,Math.PI*2); ctx.fill();
+    const leftSide  = sideOfLine(lTip.x,lTip.y, lBase.x,lBase.y, ph.x,ph.y);
+    const rightSide = sideOfLine(rBase.x,rBase.y, rTip.x,rTip.y, ph.x,ph.y);
+
+    let hit = false;
+
+    if(leftSide < 0){
+      // Photon is outside / left of the left ridge — reflect off left wall
+      const dx = lBase.x-lTip.x, dy = lBase.y-lTip.y;
+      const len = Math.hypot(dx,dy);
+      // Inward normal for left ridge (points right)
+      const nx = -dy/len, ny = dx/len;
+      const dot = ph.vx*nx + ph.vy*ny;
+      if(dot < 0){  // only reflect if moving away from hole
+        ph.vx -= 2*dot*nx;
+        ph.vy -= 2*dot*ny;
+        // Push back to just inside the left ridge
+        ph.x = lTip.x + (lBase.x-lTip.x)*0.5 + nx*2;
+        hit = true;
+      }
+    } else if(rightSide < 0){
+      // Photon is outside / right of the right ridge — reflect off right wall
+      const dx = rTip.x-rBase.x, dy = rTip.y-rBase.y;
+      const len = Math.hypot(dx,dy);
+      const nx = dy/len, ny = -dx/len;  // inward normal points left
+      const dot = ph.vx*nx + ph.vy*ny;
+      if(dot < 0){
+        ph.vx -= 2*dot*nx;
+        ph.vy -= 2*dot*ny;
+        ph.x = rTip.x + (rBase.x-rTip.x)*0.5 + nx*2;
+        hit = true;
+      }
     }
 
-    // ── Ground / panel base line ──
-    const groundY = H * 0.72;
-    ctx.fillStyle = 'rgba(20,8,10,0.7)';
-    ctx.fillRect(0, groundY, W, H - groundY);
-    ctx.strokeStyle = 'rgba(212,168,83,0.1)';
-    ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(0,groundY); ctx.lineTo(W,groundY); ctx.stroke();
+    return hit;
+  }
 
-    // ── Three panels ──
-    const panelW = Math.min(110, W / 5.5);
-    const panelH = 80;
-    const panelY = groundY - panelH;
-    const positions = [W*0.22, W*0.5, W*0.78];
-    const panelColors = ['#c4736a','#8a9e7a','#d4a853'];
-    const panelLabels = ['Flat\nH-a:Si','AR\nCoated','Nano\n🦋'];
-    const absVals = [dispFlat, dispAr, dispNano];
+  // ── Thin-film layer ──
+  function drawFilm(W, H, holes, glows, litWalls){
+    const ft = H*0.38, fb = H*0.82;   // moved down to give ridge room above
+    ctx.fillStyle = C_SURFACE;
+    ctx.fillRect(0, ft, W, fb-ft);
+    for(let y=ft+10; y<fb; y+=16){
+      ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y);
+      ctx.strokeStyle='rgba(212,168,83,0.04)'; ctx.lineWidth=0.5; ctx.stroke();
+    }
+    ctx.strokeStyle='rgba(212,168,83,0.22)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(0,ft); ctx.lineTo(W,ft); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0,fb); ctx.lineTo(W,fb); ctx.stroke();
+    ctx.fillStyle=C_MUTED; ctx.font='9px DM Mono'; ctx.textAlign='left';
+    ctx.fillText('H-a:Si THIN-FILM ABSORBER', 12, ft-6);
+    ctx.fillText('BACK CONTACT', 12, fb+13);
 
-    positions.forEach((px, i) => {
-      const cx = px;
-      const x = cx - panelW/2;
-      const color = panelColors[i];
-      const abs = absVals[i];
-      const isNano = i === 2;
+    // Draw holes (each calls drawRidges internally)
+    holes.forEach((h,i)=>drawHex(h, glows[i]||0, litWalls[i]||null));
 
-      // Panel glow
-      ctx.shadowBlur = isNano ? 18 : 8;
-      ctx.shadowColor = color + '50';
+    // Ridge label on the first hole only
+    if(holes.length > 0){
+      const h0 = holes[0];
+      const { lTip } = getRidgeGeom(h0);
+      ctx.fillStyle='rgba(138,158,122,0.8)';
+      ctx.font='8px DM Mono'; ctx.textAlign='center';
+      ctx.fillText('▲ CHITIN RIDGES — funnel light into hole', h0.cx, lTip.y - 8);
+    }
+  }
 
-      // Panel body
-      ctx.fillStyle = isNano ? 'rgba(40,28,5,0.92)' : 'rgba(30,12,16,0.88)';
-      ctx.beginPath(); ctx.roundRect(x, panelY, panelW, panelH, 6); ctx.fill();
-      ctx.strokeStyle = color; ctx.lineWidth = isNano ? 1.8 : 1;
-      ctx.beginPath(); ctx.roundRect(x, panelY, panelW, panelH, 6); ctx.stroke();
-      ctx.shadowBlur = 0;
+  // ── Photon particle factory ──
+  function makePhoton(h, speedMult){
+    speedMult = speedMult||1;
+    // Spawn across the full funnel width (including ridge area) so we see funnelling
+    const funnelW = h.r * 1.55;
+    const ang = Math.PI*0.5 + (Math.random()-0.5)*0.35;
+    const spd = (2.2 + Math.random()*0.8)*speedMult;
+    return {
+      x: h.cx + (Math.random()-0.5)*funnelW,
+      y: h.cy - h.r*1.45,   // start above the ridges
+      vx: Math.cos(ang)*spd,
+      vy: Math.sin(ang)*spd,
+      hole: h,
+      bounces: 0,
+      ridgeDeflections: 0,
+      life: 0,
+      maxLife: 300,
+      alive: true,
+      trail: [],
+      lastWall: null,
+      absorbed: false,
+    };
+  }
 
-      // Nano surface dots
-      if(isNano) {
-        for(let d=0; d<12; d++) {
-          const hx = x + 8 + (d * panelW*0.07);
-          const hy = panelY + 6;
-          const hr = 2 + Math.sin(d*1.3+t*0.05)*1.5;
-          ctx.beginPath(); ctx.arc(hx, hy, hr, 0, Math.PI*2);
-          ctx.strokeStyle = 'rgba(212,168,83,0.45)'; ctx.lineWidth=0.7; ctx.stroke();
+  // ── Update one photon (physics step) ──
+  function stepPhoton(ph){
+    if(!ph.alive) return;
+    ph.life++;
+    ph.trail.push({x:ph.x, y:ph.y, b:ph.bounces, rd:ph.ridgeDeflections});
+    if(ph.trail.length > 90) ph.trail.shift();
+
+    ph.x += ph.vx;
+    ph.y += ph.vy;
+
+    // 1. Ridge physics first (above the hole)
+    const ridgeHit = applyRidgePhysics(ph);
+    if(ridgeHit) ph.ridgeDeflections++;
+
+    // 2. Hex wall reflection (inside the hole)
+    const walls = hexWalls(ph.hole.cx, ph.hole.cy, ph.hole.r);
+    if(!insideHex(ph.x, ph.y, walls)){
+      const topY = ph.hole.cy - ph.hole.r;
+      // Only reflect if photon is actually in the hole depth zone (not still above)
+      if(ph.y > topY - 4){
+        const reflected = reflectOffHex(ph, walls);
+        if(reflected){
+          totalBounces++;
+          totalPathLen += Math.hypot(ph.vx, ph.vy)*2;
         }
       }
+    }
 
-      // Absorption energy fill
-      const fillH = (abs / 100) * (panelH - 20);
-      const fillGrad = ctx.createLinearGradient(x, panelY+panelH, x, panelY+panelH-fillH);
-      fillGrad.addColorStop(0, color+'cc');
-      fillGrad.addColorStop(1, color+'22');
-      ctx.fillStyle = fillGrad;
+    // Kill if exits too far sideways, too deep, or too old
+    const { lTip } = getRidgeGeom(ph.hole);
+    if(ph.life > ph.maxLife
+      || ph.y > ph.hole.cy + ph.hole.r*1.1
+      || (ph.y < lTip.y - 10 && ph.life > 30)){
+      ph.alive = false;
+      ph.absorbed = (ph.bounces >= 2);
+    }
+  }
+
+  // ── Draw one photon + its trail ──
+  function drawPhoton(ph, dotR){
+    dotR = dotR||3.5;
+    const tl = ph.trail;
+    for(let i=1;i<tl.length;i++){
+      const alpha = (i/tl.length)*0.75;
+      // Gold = incoming, sage-green = ridge deflected, cream = hex-wall bounce
+      const rgb = tl[i].b > 0 ? '240,230,211'
+                : tl[i].rd > 0 ? '138,158,122'
+                : '212,168,83';
       ctx.beginPath();
-      ctx.roundRect(x+5, panelY+panelH-fillH-4, panelW-10, fillH, 3);
-      ctx.fill();
+      ctx.moveTo(tl[i-1].x, tl[i-1].y);
+      ctx.lineTo(tl[i].x, tl[i].y);
+      ctx.strokeStyle = `rgba(${rgb},${alpha})`;
+      ctx.lineWidth = i > tl.length-6 ? 1.8 : 0.9;
+      ctx.stroke();
+    }
+    // Glow dot
+    ctx.shadowBlur=12; ctx.shadowColor='#d4a853';
+    ctx.beginPath(); ctx.arc(ph.x, ph.y, dotR, 0, Math.PI*2);
+    ctx.fillStyle = ph.bounces>0 ? '#f0e6d3'
+                  : ph.ridgeDeflections>0 ? '#8a9e7a'
+                  : '#d4a853';
+    ctx.fill();
+    ctx.shadowBlur=0;
+    // Flash on fresh hex-wall bounce
+    if(ph.lastWall && ph.bounces > 0 && ph.life % 3 < 2){
+      ctx.beginPath(); ctx.arc(ph.x, ph.y, dotR+5, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(196,115,106,0.35)'; ctx.fill();
+    }
+  }
 
-      // Label
-      ctx.fillStyle = '#9e7e72'; ctx.font = '9px DM Mono';
-      ctx.textAlign = 'center';
-      panelLabels[i].split('\n').forEach((line, li) => {
-        ctx.fillText(line, cx, groundY + 16 + li*14);
-      });
+  // ── Draw incoming beam spanning the full funnel width above a hole ──
+  function drawBeam(h, alpha){
+    const { lTip, rTip, topY } = getRidgeGeom(h);
+    const beamW = (rTip.x - lTip.x);
+    const numRays = 5;
+    for(let i=0; i<numRays; i++){
+      const frac = i/(numRays-1);
+      const x = lTip.x + beamW*frac;
+      const y1 = topY - h.r*0.52 - 12;
+      ctx.beginPath(); ctx.moveTo(x, 10); ctx.lineTo(x, y1);
+      ctx.strokeStyle=`rgba(212,168,83,${alpha*(0.5+0.5*(1-Math.abs(frac-0.5)*2))})`;
+      ctx.lineWidth=1.2; ctx.setLineDash([4,5]); ctx.stroke(); ctx.setLineDash([]);
+      // arrowhead on each ray
+      ctx.beginPath();
+      ctx.moveTo(x-3,y1-8); ctx.lineTo(x,y1-1); ctx.lineTo(x+3,y1-8);
+      ctx.strokeStyle=`rgba(212,168,83,${alpha*0.7})`; ctx.lineWidth=1.2; ctx.stroke();
+    }
+  }
 
-      // Absorbed % readout
-      ctx.fillStyle = color;
-      ctx.font = 'bold 12px Syne, sans-serif';
-      ctx.fillText(Math.round(abs)+'%', cx, panelY + 16);
-      ctx.textAlign = 'left';
+  // ══════════════════════════════════
+  //  MODE: SINGLE PHOTON
+  // ══════════════════════════════════
+  let sp_photons = [];  // one per hole, cycling
+  let sp_glows = [0,0,0];
+  let sp_lits  = [null,null,null];
+  let sp_cursor = 0;   // which hole is active
+  let sp_timer  = 0;
+
+  function resetSingle(){
+    sp_photons = []; sp_glows=[0,0,0]; sp_lits=[null,null,null];
+    sp_cursor=0; sp_timer=0; totalPathLen=0; totalBounces=0;
+  }
+
+  function drawSingle(W, H){
+    const holes = getHoles(W, H);
+
+    // Spawn into each hole in turn
+    sp_timer++;
+    const alive = sp_photons.filter(p=>p.alive);
+    if(alive.length === 0){
+      const h = holes[sp_cursor % 3];
+      sp_photons.push(makePhoton(h));
+      sp_cursor++;
+    }
+
+    // Decay glows
+    sp_glows = sp_glows.map(g=>Math.max(0,g-0.015));
+    sp_lits  = sp_lits.map((w,i)=> sp_glows[i]>0.05 ? w : null);
+
+    drawFilm(W, H, holes, sp_glows, sp_lits);
+
+    // Draw incoming beam for active hole
+    holes.forEach((h,i)=>{
+      const ph = sp_photons.find(p=>p.alive && p.hole===h);
+      if(ph && ph.life < 55) drawBeam(h, 0.5);
     });
 
-    // ── Light rays ──
-    const rays = cfg.rays;
-    rays.forEach((ray, ri) => {
-      const progress = ((t * ray.speed * 0.012) + ray.phase) % 1;
-      // ray travels from sky down toward panel area
-      const startX = ray.x * W;
-      const startY = -10 + progress * (groundY + 20);
-      const endX   = startX + Math.cos(Math.PI/2 - ray.angle) * ray.length;
-      const endY   = startY + Math.sin(Math.PI/2 - ray.angle) * ray.length * (-1);
+    // Step + draw
+    sp_photons.forEach(ph=>{
+      if(!ph.alive) return;
+      const prevB = ph.bounces;
+      stepPhoton(ph);
+      if(ph.bounces > prevB){
+        const hi = holes.indexOf(ph.hole);
+        sp_glows[hi] = 1.0;
+        sp_lits[hi] = ph.lastWall;
+      }
+      drawPhoton(ph, 4);
+    });
+    // Remove dead after trail fades
+    sp_photons = sp_photons.filter(p=>p.alive || p.trail.length>0);
 
-      // Which panel is this ray heading toward?
-      const targetPanel = Math.floor(ray.x * 3);
-      const isAbsorbed  = startY > groundY * 0.6;
-      const color = isAbsorbed && targetPanel === 2
-        ? `rgba(212,168,83,${ray.weight * 0.55})`
-        : isAbsorbed && targetPanel === 1
-        ? `rgba(138,158,122,${ray.weight * 0.35})`
-        : isAbsorbed
-        ? `rgba(196,115,106,${ray.weight * 0.25})`
-        : currentSky === 'dawn'
-        ? `rgba(220,120,80,${ray.weight * 0.3})`
-        : `rgba(240,210,160,${ray.weight * 0.25})`;
+    // Stats
+    const bounceTotal = sp_photons.reduce((s,p)=>s+p.bounces,0);
+    const pathTotal   = sp_photons.reduce((s,p)=>s+p.trail.length,0);
+    document.getElementById('pathMultiplier').textContent =
+      pathTotal>0 ? (pathTotal/(holes[0].r*2*1.5)).toFixed(1)+'×' : '—';
+    document.getElementById('absorptionCount').textContent =
+      bounceTotal>0 ? bounceTotal : '—';
+  }
 
-      ctx.beginPath();
-      ctx.moveTo(startX, startY);
-      ctx.lineTo(endX, Math.max(-10, endY));
-      ctx.strokeStyle = color;
-      ctx.lineWidth = ray.weight * 1.2;
-      ctx.stroke();
+  // ══════════════════════════════════
+  //  MODE: MULTI-RAY
+  // ══════════════════════════════════
+  let mr_photons = [];
+  let mr_glows   = [0,0,0];
+  let mr_lits    = [null,null,null];
 
-      // Scatter sparkle near nano panel
-      if(isAbsorbed && targetPanel === 2 && Math.random() < 0.015) {
-        ctx.beginPath();
-        ctx.arc(startX + (Math.random()-0.5)*30, groundY - 20 - Math.random()*40, 2, 0, Math.PI*2);
-        ctx.fillStyle = 'rgba(212,168,83,0.7)';
-        ctx.fill();
+  function resetMulti(){ mr_photons=[]; mr_glows=[0,0,0]; mr_lits=[null,null,null]; }
+
+  function spawnMultiWave(holes){
+    holes.forEach(h=>{
+      // 5 photons per hole, spread across hole width
+      for(let i=0;i<5;i++){
+        const ph = makePhoton(h, 0.9);
+        ph.x = h.cx + (i-2)*h.r*0.3;
+        ph.vy = Math.abs(ph.vy);
+        mr_photons.push(ph);
       }
     });
+  }
 
-    // ── Reflected rays off flat & AR panels ──
-    // Show rejected photons bouncing away from flat/AR
-    if(t % 3 === 0 && Math.random() < 0.4) {
-      [[W*0.22,'#c4736a',0.3],[W*0.5,'#8a9e7a',0.2]].forEach(([px,col,op])=>{
-        const rx = px + (Math.random()-0.5)*40;
-        ctx.beginPath();
-        ctx.moveTo(rx, panelY + 4);
-        ctx.lineTo(rx + (Math.random()-0.5)*40, panelY - 40 - Math.random()*30);
-        ctx.strokeStyle = col.replace(')',`,${op})`).replace('rgb','rgba');
-        ctx.lineWidth = 0.8; ctx.stroke();
+  function drawMulti(W, H){
+    const holes = getHoles(W, H);
+
+    // Respawn when all dead
+    if(mr_photons.filter(p=>p.alive).length === 0){
+      spawnMultiWave(holes);
+    }
+
+    mr_glows = mr_glows.map(g=>Math.max(0,g-0.01));
+    mr_lits  = mr_lits.map((w,i)=> mr_glows[i]>0.05 ? w : null);
+
+    // Incoming rain lines (background)
+    const ft = H*0.38;
+    for(let rx=30; rx<W-30; rx+=32){
+      const prog = ((t*1.4 + rx*0.7) % (ft+20));
+      ctx.beginPath(); ctx.moveTo(rx, 0); ctx.lineTo(rx, prog);
+      ctx.strokeStyle='rgba(212,168,83,0.09)'; ctx.lineWidth=0.7;
+      ctx.setLineDash([3,5]); ctx.stroke();
+    }
+    ctx.setLineDash([]);
+
+    drawFilm(W, H, holes, mr_glows, mr_lits);
+
+    holes.forEach(h=>drawBeam(h, 0.35));
+
+    mr_photons.forEach(ph=>{
+      if(!ph.alive) return;
+      const hi = holes.indexOf(ph.hole);
+      const prevB = ph.bounces;
+      stepPhoton(ph);
+      if(ph.bounces > prevB){
+        mr_glows[hi] = Math.min(1, mr_glows[hi]+0.4);
+        mr_lits[hi] = ph.lastWall;
+      }
+      drawPhoton(ph, 2.8);
+    });
+    mr_photons = mr_photons.filter(p=>p.alive || p.trail.length>2);
+
+    const bounceTotal = mr_photons.reduce((s,p)=>s+p.bounces,0);
+    document.getElementById('pathMultiplier').textContent = '3–8×';
+    document.getElementById('absorptionCount').textContent =
+      bounceTotal>0 ? bounceTotal : '—';
+  }
+
+  // ══════════════════════════════════
+  //  MODE: COMPARE
+  // ══════════════════════════════════
+  let cmp_flat_photons = [];
+  let cmp_nano_photons = [];
+  let cmp_glows = [0,0];
+  let cmp_lits  = [null,null];
+  // rHoles are created once and reused so ph.hole identity is stable across frames
+  let cmp_rHoles = null;
+
+  function resetCompare(){
+    cmp_flat_photons=[]; cmp_nano_photons=[];
+    cmp_glows=[0,0]; cmp_lits=[null,null];
+    cmp_rHoles=null;
+  }
+
+  function drawCompare(W, H){
+    const divX = W*0.5;
+    const ft = H*0.38, fb = H*0.82;
+
+    // Build rHoles once (stable object references for photon identity)
+    if(!cmp_rHoles){
+      const rHoleR = Math.min((W*0.5-30)/4.5, 52);
+      cmp_rHoles = [
+        { cx: W*0.635, cy: H*0.60, r: rHoleR },
+        { cx: W*0.82,  cy: H*0.60, r: rHoleR },
+      ];
+    }
+    const rHoles = cmp_rHoles;
+
+    // ── Left: flat thin-film ──
+    ctx.fillStyle = C_SURFACE;
+    ctx.fillRect(0, ft, divX-12, fb-ft);
+    ctx.strokeStyle='rgba(212,168,83,0.2)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(0,ft); ctx.lineTo(divX-12,ft); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0,fb); ctx.lineTo(divX-12,fb); ctx.stroke();
+
+    // Divider
+    ctx.beginPath(); ctx.moveTo(divX,0); ctx.lineTo(divX,H);
+    ctx.strokeStyle='rgba(212,168,83,0.18)'; ctx.lineWidth=1;
+    ctx.setLineDash([4,4]); ctx.stroke(); ctx.setLineDash([]);
+
+    // ── Right: nanostructured film ──
+    ctx.fillStyle = C_SURFACE;
+    ctx.fillRect(divX+12, ft, W-divX-12, fb-ft);
+    ctx.strokeStyle='rgba(212,168,83,0.2)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(divX+12,ft); ctx.lineTo(W,ft); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(divX+12,fb); ctx.lineTo(W,fb); ctx.stroke();
+
+    // Section labels
+    ctx.fillStyle=C_MUTED; ctx.font='9px DM Mono'; ctx.textAlign='center';
+    ctx.fillText('FLAT THIN-FILM', divX*0.5, ft-6);
+    ctx.fillText('NANOSTRUCTURED', divX + (W-divX)*0.5, ft-6);
+    ctx.fillText('H-a:Si THIN-FILM ABSORBER', divX*0.5, ft+14);
+    ctx.fillText('H-a:Si THIN-FILM ABSORBER', divX + (W-divX)*0.5, ft+14);
+    ctx.fillText('BACK CONTACT', divX*0.5, fb+13);
+    ctx.fillText('BACK CONTACT', divX + (W-divX)*0.5, fb+13);
+
+    // Draw nano holes with glow/lit wall
+    cmp_glows = cmp_glows.map(g=>Math.max(0,g-0.012));
+    cmp_lits  = cmp_lits.map((w,i)=>cmp_glows[i]>0.05?w:null);
+    rHoles.forEach((h,i)=>drawHex(h, cmp_glows[i]||0, cmp_lits[i]||null));
+
+    // ── FLAT side: spawn photons that travel down and reflect off the surface ──
+    if(cmp_flat_photons.filter(p=>p.alive).length < 5){
+      const fx = 24 + Math.random()*(divX-48);
+      // Slight inward angle so the V-shape of down+up is visible
+      const vx = (Math.random()-0.5)*0.5;
+      cmp_flat_photons.push({
+        x:fx, y:6, vx, vy:2.2,
+        alive:true, life:0, reflected:false, trail:[], reflectY:0
       });
     }
 
+    cmp_flat_photons.forEach(ph=>{
+      if(!ph.alive) return;
+      ph.life++;
+      ph.trail.push({x:ph.x, y:ph.y, r:ph.reflected});
+      if(ph.trail.length>50) ph.trail.shift();
+      ph.x += ph.vx;
+      ph.y += ph.vy;
+
+      // Hit the flat film surface → reflect upward
+      if(!ph.reflected && ph.y >= ft){
+        ph.reflectY = ft;
+        ph.vy = -Math.abs(ph.vy);          // always bounce upward
+        ph.vx += (Math.random()-0.5)*0.4;
+        ph.reflected = true;
+      }
+      // Kill when it exits top of canvas or times out
+      if(ph.life > 200 || ph.y < -10) ph.alive = false;
+
+      // Draw trail — gold coming down, rose going back up
+      for(let i=1;i<ph.trail.length;i++){
+        const alpha = (i/ph.trail.length)*0.7;
+        const rgb = ph.trail[i].r ? '196,115,106' : '212,168,83';
+        ctx.beginPath();
+        ctx.moveTo(ph.trail[i-1].x, ph.trail[i-1].y);
+        ctx.lineTo(ph.trail[i].x,   ph.trail[i].y);
+        ctx.strokeStyle = `rgba(${rgb},${alpha})`;
+        ctx.lineWidth = 1.3; ctx.stroke();
+      }
+
+      // Photon dot
+      ctx.beginPath(); ctx.arc(ph.x, ph.y, 3, 0, Math.PI*2);
+      ctx.fillStyle = ph.reflected ? '#c4736a' : '#d4a853'; ctx.fill();
+
+      // "reflected" label — show briefly right after the bounce while going up
+      if(ph.reflected && ph.vy < 0 && ph.life < 130){
+        ctx.fillStyle='rgba(196,115,106,0.85)'; ctx.font='8px DM Mono';
+        ctx.textAlign='center';
+        ctx.fillText('↑ reflected', ph.x, ph.y - 10);
+      }
+    });
+    cmp_flat_photons = cmp_flat_photons.filter(p=>p.alive || p.trail.length>1);
+
+    // ── NANO side: photons enter holes, bounce off hex walls ──
+    // Keep ~3 photons alive per hole
+    if(cmp_nano_photons.filter(p=>p.alive).length < rHoles.length*3){
+      const h = rHoles[Math.floor(Math.random()*rHoles.length)];
+      cmp_nano_photons.push(makePhoton(h, 0.95));
+    }
+    rHoles.forEach(h => drawBeam(h, 0.45));
+
+    cmp_nano_photons.forEach(ph=>{
+      if(!ph.alive) return;
+      // Identify which slot this photon belongs to by object identity
+      const hi = rHoles.indexOf(ph.hole);
+      if(hi < 0){ ph.alive = false; return; }
+      const prevB = ph.bounces;
+      stepPhoton(ph);
+      if(ph.bounces > prevB){
+        cmp_glows[hi] = Math.min(1, cmp_glows[hi] + 0.55);
+        cmp_lits[hi]  = ph.lastWall;
+      }
+      drawPhoton(ph, 3);
+    });
+    // Remove photons whose trails have fully faded
+    cmp_nano_photons = cmp_nano_photons.filter(p=>p.alive || p.trail.length>2);
+
+    document.getElementById('pathMultiplier').textContent = 'Flat: ~1×  |  Nano: 3–8×';
+    document.getElementById('absorptionCount').textContent =
+      cmp_nano_photons.reduce((s,p)=>s+p.bounces, 0) || '—';
+  }
+
+  // ── Main loop ──
+  function draw(){
+    const W=canvas.width, H=canvas.height;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=C_BG; ctx.fillRect(0,0,W,H);
+    if(mode==='single')       drawSingle(W,H);
+    else if(mode==='multi')   drawMulti(W,H);
+    else if(mode==='compare') drawCompare(W,H);
     t++;
+    requestAnimationFrame(draw);
   }
 
-  function updateMeters() {
-    const speed = 0.07;
-    dispFlat = lerp(dispFlat, targetFlat, speed);
-    dispAr   = lerp(dispAr,   targetAr,   speed);
-    dispNano = lerp(dispNano, targetNano, speed);
+  // ── Mode buttons ──
+  document.querySelectorAll('.nanohole-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.nanohole-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      mode=btn.dataset.mode;
+      t=0; totalPathLen=0; totalBounces=0;
+      resetSingle(); resetMulti(); resetCompare();
+      const descs={
+        single:'A single photon enters each nanohole in turn. Watch it reflect off the flat hexagonal walls — each bounce is a chance for the absorber material to capture its energy.',
+        multi:'Multiple photons enter all three holes simultaneously. The varying entry angles produce different bounce paths — the disordered geometry ensures broad-spectrum capture.',
+        compare:'Left: photons hit a flat thin-film surface and reflect straight back — most energy is lost. Right: photons enter nanoholes and bounce between the flat walls until absorbed.'
+      };
+      document.getElementById('nanoholeDesc').textContent=descs[mode];
+    });
+  });
 
-    document.getElementById('dm-flat').style.width  = dispFlat + '%';
-    document.getElementById('dm-ar').style.width    = dispAr   + '%';
-    document.getElementById('dm-nano').style.width  = dispNano + '%';
-    document.getElementById('dv-flat').textContent  = Math.round(dispFlat) + '%';
-    document.getElementById('dv-ar').textContent    = Math.round(dispAr)   + '%';
-    document.getElementById('dv-nano').textContent  = Math.round(dispNano) + '%';
-  }
-
-  function loop() {
-    drawScene();
-    updateMeters();
-    requestAnimationFrame(loop);
-  }
-  loop();
+  draw();
 })();
-
 
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
